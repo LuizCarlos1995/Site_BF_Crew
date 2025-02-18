@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
+
+/*variaveis css globais */
+
+:root {
+    --cor-primaria: #1D1616;
+    --cor-secundaria: #D84040;
+    --cor-terciaria: #EEEEEE;
+    --cor-hover: #8E1616
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor-primaria);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    font-family: "Fruktur", serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    margin: 1rem;
+    gap: 10px;
+}
+
+img {
+    width: 15%;
+}
+
+/* Estilo geral do menu de navegação */
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-terciaria);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.naomostra {
+    display: none;
+}
+
+/* Estilo dos links do menu */
+
+nav a {
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    border: 2px solid var(--cor-hover);
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Fruktur", serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    padding: 0.9rem;
+    transition: background-color 0.3s var(--cor-hover);
+    background-color: var(--cor-primaria);
+    margin: 0% 5%;
+    box-shadow: 0 5px 10px var(--cor-hover);
+}
+
+nav a:hover {
+    background-color: var(--cor-hover);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 768px) {
+    header {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .menu {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin-bottom: 10px;
+        width: 80%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
